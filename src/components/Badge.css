@@ -1,0 +1,61 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  font-weight: var(--font-weight-medium);
+  border-radius: var(--radius-full);
+  white-space: nowrap;
+  border: 1px solid transparent;
+  transition: all var(--transition-fast);
+}
+
+.badge--md {
+  padding: 0.2em 0.75em;
+  font-size: var(--font-size-xs);
+}
+
+.badge--sm {
+  padding: 0.15em 0.5em;
+  font-size: 0.65rem;
+}
+
+.badge--default {
+  background: var(--color-surface);
+  color: var(--color-text-secondary);
+  border-color: var(--color-border);
+}
+
+.badge--brand {
+  background: var(--color-accent-primary-subtle);
+  color: var(--color-accent-primary-hover);
+  border-color: rgba(99, 102, 241, 0.25);
+}
+
+.badge--status {
+  background: var(--color-warning-subtle);
+  color: var(--color-warning);
+  border-color: rgba(245, 158, 11, 0.25);
+}
+
+.badge--success {
+  background: var(--color-success-subtle);
+  color: var(--color-success);
+  border-color: rgba(34, 197, 94, 0.25);
+}
+
+.badge--error {
+  background: var(--color-error-subtle);
+  color: var(--color-error);
+  border-color: rgba(239, 68, 68, 0.25);
+}
+
+.badge--warning {
+  background: var(--color-warning-subtle);
+  color: var(--color-warning);
+  border-color: rgba(245, 158, 11, 0.25);
+}
+
+/* variant=category uses inline styles for dynamic colors */
+.badge--category {
+  border-width: 1px;
+  border-style: solid;
+}

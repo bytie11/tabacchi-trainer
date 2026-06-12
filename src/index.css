@@ -1,0 +1,2 @@
+/* Vite CSS entry — chains global.css → variables.css + fonts */
+@import './styles/global.css';

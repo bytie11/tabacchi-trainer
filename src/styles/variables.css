@@ -1,0 +1,117 @@
+/* ============================================
+   Tabacchi Trainer — Design System Variables
+   ============================================ */
+
+:root {
+  /* ── Colors — Dark premium theme ── */
+  --color-bg-primary: #0f1117;
+  --color-bg-secondary: #1a1d27;
+  --color-bg-tertiary: #242836;
+  --color-bg-card: #1e2230;
+  --color-bg-card-hover: #262a3a;
+  --color-bg-overlay: rgba(0, 0, 0, 0.6);
+
+  --color-surface: #2a2e3d;
+  --color-surface-hover: #333849;
+
+  --color-border: #2e3346;
+  --color-border-light: #3a3f52;
+
+  /* ── Text ── */
+  --color-text-primary: #e8eaf0;
+  --color-text-secondary: #9ca3b8;
+  --color-text-muted: #6b7280;
+  --color-text-inverse: #0f1117;
+
+  /* ── Accent — Indigo / Teal palette ── */
+  --color-accent-primary: #6366f1;
+  --color-accent-primary-hover: #818cf8;
+  --color-accent-primary-subtle: rgba(99, 102, 241, 0.12);
+  --color-accent-secondary: #14b8a6;
+  --color-accent-secondary-hover: #2dd4bf;
+  --color-accent-secondary-subtle: rgba(20, 184, 166, 0.12);
+
+  /* ── Semantic ── */
+  --color-success: #22c55e;
+  --color-success-subtle: rgba(34, 197, 94, 0.12);
+  --color-error: #ef4444;
+  --color-error-subtle: rgba(239, 68, 68, 0.12);
+  --color-warning: #f59e0b;
+  --color-warning-subtle: rgba(245, 158, 11, 0.12);
+  --color-info: #3b82f6;
+  --color-info-subtle: rgba(59, 130, 246, 0.12);
+
+  /* ── Category colors ── */
+  --color-cat-sigarette: #8b5cf6;
+  --color-cat-senza-combustione: #06b6d4;
+  --color-cat-trinciato: #22c55e;
+  --color-cat-sigari: #f59e0b;
+  --color-cat-sigaretti: #ec4899;
+  --color-cat-cartine: #3b82f6;
+  --color-cat-filtri: #6366f1;
+  --color-cat-accessori: #f97316;
+  --color-cat-altro: #64748b;
+
+  /* ── Typography ── */
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+
+  /* ── Spacing ── */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+
+  /* ── Border radius ── */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 20px;
+  --radius-full: 9999px;
+
+  /* ── Shadows ── */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.4);
+  --shadow-xl: 0 16px 50px rgba(0, 0, 0, 0.5);
+  --shadow-glow: 0 0 20px rgba(99, 102, 241, 0.2);
+
+  /* ── Transitions ── */
+  --transition-fast: 150ms ease;
+  --transition-normal: 250ms ease;
+  --transition-slow: 400ms ease;
+  --transition-spring: 500ms cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* ── Layout ── */
+  --sidebar-width: 260px;
+  --header-height: 64px;
+  --bottom-nav-height: 72px;
+  --max-content-width: 1200px;
+
+  /* ── Z-index ── */
+  --z-sidebar: 100;
+  --z-header: 200;
+  --z-overlay: 300;
+  --z-modal: 400;
+  --z-toast: 500;
+}
