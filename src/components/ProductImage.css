@@ -16,8 +16,14 @@
 }
 
 .product-image--lg {
-  width: 280px;
-  height: 360px;
+  width: 100%;
+  height: 100%;
+  max-width: 280px;
+  max-height: 360px;
+}
+
+.product-image--quiz .product-image__img {
+  object-fit: contain;
 }
 
 .product-image__img {

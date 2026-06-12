@@ -69,13 +69,13 @@ export const ProductImage: React.FC<ProductImageProps> = ({
   }
 
   return (
-    <div className={`product-image product-image--${size} ${className}`}>
+    <div className={`product-image product-image--${size} ${variant === 'quiz' ? 'product-image--quiz' : ''} ${className}`}>
       <img
         src={imgSrc}
         alt={`Pacchetto ${product.fullName}`}
         className="product-image__img"
         onError={handleImageError}
-        loading="lazy"
+        loading={variant === 'quiz' ? 'eager' : 'lazy'}
       />
       {product.imageStatus === 'needs_review' && (
         <span className="product-image__review-badge" title="Immagine da verificare">
