@@ -153,7 +153,7 @@ export const CatalogoPage: React.FC = () => {
             </div>
           ) : (
             <div className="catalogo-list-wrapper">
-              <table className="catalogo-list">
+              <table className="catalogo-list catalogo-list-table">
                 <thead>
                   <tr>
                     <th scope="col" className="col-image">Foto</th>
@@ -209,6 +209,35 @@ export const CatalogoPage: React.FC = () => {
                   ))}
                 </tbody>
               </table>
+
+              <div className="catalogo-list-mobile">
+                {filteredProducts.map((product) => (
+                  <div className="catalogo-mobile-row" key={product.id}>
+                    <div className="catalogo-mobile-row__image">
+                      <ProductImage product={product} size="sm" />
+                    </div>
+                    <div className="catalogo-mobile-row__details">
+                      <div className="catalogo-mobile-row__header">
+                        <span className="catalogo-mobile-row__brand">{product.brand}</span>
+                        {product.imageStatus === 'available' ? (
+                          <Badge label="Disponibile" variant="success" size="sm" />
+                        ) : product.imageStatus === 'needs_review' ? (
+                          <Badge label="Verifica" variant="error" size="sm" />
+                        ) : (
+                          <Badge label="Mancante" variant="warning" size="sm" />
+                        )}
+                      </div>
+                      <h4 className="catalogo-mobile-row__title">{product.productName}</h4>
+                      <div className="catalogo-mobile-row__footer">
+                        <Badge label="" variant="category" category={product.category} size="sm" />
+                        {product.variant && (
+                          <span className="catalogo-mobile-row__variant">{product.variant}</span>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           )}
         </section>

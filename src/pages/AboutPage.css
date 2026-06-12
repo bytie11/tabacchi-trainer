@@ -264,3 +264,56 @@
   color: var(--color-text-muted);
   line-height: var(--line-height-relaxed);
 }
+
+/* ── PWA Instructions ── */
+.about-pwa-instructions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin-top: var(--space-4);
+}
+
+@media (min-width: 641px) {
+  .about-pwa-instructions {
+    flex-direction: row;
+  }
+}
+
+.about-pwa-platform {
+  flex: 1;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.about-pwa-platform:hover {
+  border-color: var(--color-border-light);
+  box-shadow: var(--shadow-md);
+}
+
+.about-pwa-platform__title {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  margin: 0 0 var(--space-3) 0;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: var(--space-2);
+}
+
+.about-pwa-steps {
+  margin: 0;
+  padding-left: var(--space-5);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+}
+
+.about-pwa-steps li {
+  margin-bottom: var(--space-2);
+}
+
+.about-pwa-steps li:last-child {
+  margin-bottom: 0;
+}

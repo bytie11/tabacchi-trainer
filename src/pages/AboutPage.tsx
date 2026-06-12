@@ -99,6 +99,32 @@ export const AboutPage: React.FC = () => {
         </div>
       </section>
 
+      {/* ── Installazione PWA ── */}
+      <section className="about-section">
+        <h2 className="about-section__title">Installa come App (PWA)</h2>
+        <p style={{ color: 'var(--color-text-secondary)', marginBottom: 'var(--space-4)', fontSize: 'var(--font-size-sm)', lineHeight: 'var(--line-height-normal)' }}>
+          Puoi installare questa applicazione sulla schermata home del tuo smartphone per utilizzarla a tutto schermo come se fosse un'applicazione nativa, anche in modalità offline.
+        </p>
+        <div className="about-pwa-instructions">
+          <div className="about-pwa-platform">
+            <h4 className="about-pwa-platform__title">📱 iPhone / iOS (Safari)</h4>
+            <ol className="about-pwa-steps">
+              <li>Apri il sito in <strong>Safari</strong>.</li>
+              <li>Tocca il pulsante di <strong>Condivisione</strong> (l'icona con il quadrato e la freccia verso l'alto).</li>
+              <li>Scorri verso il basso e tocca <strong>"Aggiungi alla schermata Home"</strong>.</li>
+            </ol>
+          </div>
+          <div className="about-pwa-platform">
+            <h4 className="about-pwa-platform__title">🤖 Android (Chrome)</h4>
+            <ol className="about-pwa-steps">
+              <li>Apri il sito in <strong>Chrome</strong>.</li>
+              <li>Tocca l'icona con i <strong>tre puntini</strong> in alto a destra per aprire il menu.</li>
+              <li>Tocca <strong>"Installa app"</strong> o <strong>"Aggiungi a schermata Home"</strong>.</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
       {/* ── Come aggiornare i dati ── */}
       <section className="about-section">
         <h2 className="about-section__title">Come aggiornare i dati</h2>

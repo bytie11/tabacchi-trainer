@@ -244,8 +244,18 @@
   color: var(--color-text-muted);
 }
 
-/* Responsività */
-@media (max-width: 992px) {
+/* Desktop-to-mobile view switching for Catalogo list view */
+.catalogo-list-mobile {
+  display: none;
+}
+
+@media (min-width: 641px) {
+  .catalogo-list-table {
+    display: table;
+  }
+}
+
+@media (max-width: 1024px) {
   .catalogo-layout {
     grid-template-columns: 1fr;
   }
@@ -255,7 +265,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 640px) {
   .catalogo-controls {
     flex-direction: column;
     align-items: stretch;
@@ -265,10 +275,83 @@
     max-width: 100%;
   }
 
-  .catalogo-list th:nth-child(5),
-  .catalogo-list td:nth-child(5),
-  .catalogo-list th:nth-child(6),
-  .catalogo-list td:nth-child(6) {
-    display: none; /* Nascondi colonne varianti e note su schermi piccoli */
+  .catalogo-list-table {
+    display: none; /* Nascondi la tabella su mobile */
+  }
+
+  .catalogo-list-mobile {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    padding: var(--space-2) 0;
+  }
+
+  .catalogo-mobile-row {
+    display: flex;
+    gap: var(--space-4);
+    background-color: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-3);
+    align-items: center;
+  }
+
+  .catalogo-mobile-row__image {
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-bg-tertiary);
+    border-radius: var(--radius-md);
+    flex-shrink: 0;
+    overflow: hidden;
+  }
+
+  .catalogo-mobile-row__image .product-image--sm {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .catalogo-mobile-row__details {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex-grow: 1;
+  }
+
+  .catalogo-mobile-row__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .catalogo-mobile-row__brand {
+    font-size: 10px;
+    text-transform: uppercase;
+    font-weight: var(--font-weight-bold);
+    color: var(--color-accent-secondary);
+    letter-spacing: 0.05em;
+  }
+
+  .catalogo-mobile-row__title {
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-primary);
+    margin: 0;
+    line-height: var(--line-height-tight);
+  }
+
+  .catalogo-mobile-row__footer {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    margin-top: 2px;
+  }
+
+  .catalogo-mobile-row__variant {
+    font-size: 11px;
+    color: var(--color-text-muted);
   }
 }

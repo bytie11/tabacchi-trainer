@@ -49,7 +49,7 @@ L'app sarà disponibile su `http://localhost:5173`
 L'applicazione è configurata per il deploy automatico su **GitHub Pages** tramite GitHub Actions.
 
 - **URL Pubblico**: [https://bytie11.github.io/tabacchi-trainer/](https://bytie11.github.io/tabacchi-trainer/)
-- **Accesso**: Diretto e pubblico, senza password o autenticazione.
+- **Accesso**: Diretto e pubblico, senza password, schermate di login o autenticazione in questa versione.
 
 ### Configurazione per GitHub Pages
 1. **Base Path**: Configurato in `vite.config.ts` come `base: '/tabacchi-trainer/'`.
@@ -63,12 +63,31 @@ L'applicazione è configurata per il deploy automatico su **GitHub Pages** trami
 4. Sotto **Build and deployment**, imposta la **Source** su **GitHub Actions** (invece di *Deploy from a branch*).
 5. Il workflow partirà automaticamente e pubblicherà il sito all'indirizzo sopra indicato.
 
+## Design Responsive & Mobile-First
+L'applicazione è completamente ottimizzata per qualsiasi dispositivo (Laptop, PC, Tablet, iPhone, schermi piccoli come iPhone SE):
+- **Breakpoints**: Mobile (fino a 640px), Tablet (641px - 1024px), Desktop (oltre 1024px).
+- **Navigazione**: Sidebar fissa a sinistra su schermi desktop, barra di navigazione inferiore comoda su mobile/tablet posizionata nella zona del pollice e compatibile con safe areas iOS.
+- **Layout Catalogo**: Su schermi piccoli, la tabella si converte automaticamente in una lista di card compatte per evitare scroll orizzontali.
+- **Filtri**: Collassabili su mobile per non occupare spazio e ad altezza interazione maggiorata per schermi touch.
+- **Quiz**: Ottimizzato verticalmente per schermi mobile in modo da visualizzare le opzioni e i feedback senza eccessivo scorrimento.
+
+## Progressive Web App (PWA)
+Il progetto è configurato come Progressive Web App installabile con caching e supporto offline tramite `vite-plugin-pwa`:
+- **Caching offline**: Caching automatico degli asset statici (JS, CSS, HTML, icone) e caching dinamico `CacheFirst` per le immagini dei prodotti.
+- **Installabilità**: Può essere aggiunta alla Schermata Home dello smartphone.
+- **Aggiornamento**: Configurato con `autoUpdate` per il rilascio silente di nuove versioni senza bloccare l'utente su vecchie build.
+
+### Come Installare
+- **iPhone / iOS (Safari)**: Apri il sito in Safari, tocca il pulsante **Condividi**, scorri e seleziona **"Aggiungi alla schermata Home"**.
+- **Android (Chrome)**: Apri il sito in Chrome, tocca il menu con i **tre puntini**, seleziona **"Installa app"** o **"Aggiungi a schermata Home"**.
+
 ## Stack Tecnico
 
-- React 18 + TypeScript
-- Vite
-- React Router v6
-- CSS Modules + Custom Properties
+- React 19 + TypeScript
+- Vite 8
+- vite-plugin-pwa (PWA)
+- React Router v7
+- Custom CSS Variables (Design System)
 - localStorage per persistenza dati
 
 ## Struttura Progetto
